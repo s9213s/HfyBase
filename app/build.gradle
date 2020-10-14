@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.deyi.hfybase"
+        minSdkVersion 16
+        targetSdkVersion 29
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:+'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    ----------------------base，okgo Http封装配置
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //最强工具库
+    implementation 'com.blankj:utilcode:1.23.2'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //进度条
+    implementation 'com.daimajia.numberprogressbar:library:1.4@aar'
+    //动画库
+    implementation 'com.daimajia.androidanimations:library:1.1.3@aar'
+    //okgo
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //Chuck是一个简单的应用程序中的HTTP检查器为Android OkHttp客户端 ,调试利器
+    implementation 'com.readystatesoftware.chuck:library:1.0.4'
+    //加载动画
+    implementation 'com.wang.avi:library:2.1.3'
+    //RxJava
+    implementation 'io.reactivex:rxjava:1.2.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    //rxbinding
+    implementation 'com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0'
+    //rxpermissions权限
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+    //状态栏
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    //跳动的TextView
+    implementation 'net.frakbot:jumpingbeans:1.3.0'
+    //圆形进度条
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    //鲁班压缩
+    implementation 'top.zibin:Luban:1.1.8'
+    //    ======================baseHttp
+
+    api 'com.google.guava:guava:25.1-android'
+
+}
